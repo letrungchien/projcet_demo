@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user_manager.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div>
+        <div class="container1">
+            <p style="margin-left: 1370px;"> <span><img src="../assets/icons/Mail.png" alt=""></span>&nbsp;&nbsp; <span><img src="../assets/icons/bell.png" alt=""></span> &nbsp;&nbsp;<span><img src="../assets/images/Avatar.png" alt=""></span></p>
+        </div>
+        <div class="container2">
+            <div class="content1">
+                <button style="background-color: brown; color: #FFFFFF;" id="btn-user"  onclick="showUsers()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector1.png" alt="">&nbsp; Manage Users</button><br>
+                <button id="btn-entries" onclick="showEntries()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector2.png" alt="">&nbsp; Manage Entries</button><br>
+                <button id="btn-artice" onclick="showArticle()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector3.png" alt="">&nbsp; Manage Article</button><br>
+                <button class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector4.png" alt="" >&nbsp; Log out </button>
+            </div>
+            <div id="content2" class="content2">
+                <div class="item1">
+                    <div class="item2" ><b>Team members</b> &nbsp; <button class="btn-user" id="btn-users" ></button></div>
+                    <div class="item3" ><input id="inputUsers" style="width: 300px;height: 40px;" type="text" placeholder="Tìm kiếm người dùng"><span ><i onclick="searchUsers()" class="fa-solid fa-magnifying-glass" ></i></span> </div>
+                </div><br>
+                <div class="table-container">
+                    <table class="table" >
+                        <thead>
+                            <tr>
+                                <td class="td-1" class="name-column-td">Name</td>
+                                <td class="td-1">Status  <span><img src="../assets/icons/arrow-down.png" alt=""></span></td>
+                                <td class="td-1">Email address</td>
+                                <td class="td-1">active sort by name <span ><button onclick="sorta_b()"><img src="../assets/icons/chevrons-down.png" alt=""> </button><button onclick="sortb_a()"><img src="../assets/icons/chevrons-up.png" alt=""></button></span></td>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- <tr>
+                                <td class="name-column-td">
+                                    <div style="display: flex;gap: 10px;">
+                                        <div><img src="../assets/images/Avatar.png" alt="" srcset=""></div>
+                                        <div> <span>Olivia Rhye</span>  <br>
+                                            <span class="span">@olivia</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td >hoạt động</td>
+                                <td class="span">olivia@untitledui.com</td>
+                                <td >
+                                    <button class="btn-b" onclick="block(${i})">block</button>
+                                    <button class="btn-b" onclick="unblock(${i})">unblock</button>
+                                </td>
+                               
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-right: 200px;text-align: center;justify-content: space-around;display: flex;" id="btn"></p>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/user_manager.js"></script>
+</html>

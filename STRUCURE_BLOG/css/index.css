@@ -1,0 +1,268 @@
+
+.container-dark{
+    position: absolute;
+    background: rgba(0, 0, 0,0.5);
+}
+.container1{
+   display: flex;
+gap: 90px;
+height: 75px;
+border-bottom: 1px solid black;
+align-items: center;
+}
+.container1 .content1  span{
+    margin-left: 20px;
+}
+
+.content2{
+    width: 850px;
+}
+.content2 .input{
+    width: 850px;
+    height: 37px;
+position: absolute;
+border-radius: 6px;
+border: 1px solid black;
+}
+.btn-search{
+    position: relative;
+    left: 800px;
+    border: none;
+    top: 2px;
+    background-color: #fff;
+}
+.content3  span  button{
+
+    background-color: #fff;
+    height: 33px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+.container1 .content3{
+    display: none;
+}
+.container2{
+margin-left: 150px;
+}
+.item1{
+    width: 550px;
+}
+.text{
+    flex-wrap: wrap;
+}
+.item{
+    display: flex;
+    gap: 22px;
+}
+.date{
+    color: #6941C6;
+    font-family: Inter;
+    font-size: 16px;
+}
+.text1{
+    color: #667085;
+    font-family: Inter;
+}
+.btn-topic{
+    font-family: Inter;
+    color: #026AA2;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: #F0F9FF;
+    border: none;
+}
+.container3{
+    display: block;
+    font-family: Inter;
+    color: #F80101;
+    margin-top: 30px;
+    margin-left: 500px;
+    font-size: 40px;
+  
+}
+.container4{
+    display: block;
+    margin-left: 250px;
+}
+
+.container4 .btn-many{
+background-color: #FFFFFF;
+border: none;
+
+}
+.change-many{
+    background-color: rgba(127,127,127,255);
+border: none;
+}
+.container4 .content2{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 1200px;
+}
+.container5{
+    display: flex;
+    gap: 130px;
+    margin-left: 30px;
+    margin-top: 40px;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+.container6{
+    margin-left: 700px;
+    margin-top: 30px;
+}
+.add{
+   display: none;
+}
+.show-add{
+    display: block ;
+   position: relative;
+   bottom: 600px;
+   background-color: #FFFFFF;
+   width: 1000px;
+   height: 600px;
+   margin-left: 300px;
+   padding-left: 40px;
+   padding-top: 20px;
+    
+}
+.details{
+    margin-left: 100px;
+}
+.details .content{
+    width: 800px;
+    background-color:#F7F8F9 ;
+}
+.container7{
+    display: none;
+}
+.show-container7{
+    display: block;
+    width: 220px;
+    border-radius: 3px;
+    position: relative;
+    left: 1290px;
+   bottom: 1970px;
+   background-color: #fff;
+}
+.details{
+   display: none;
+}
+.show-details{
+    display: block;
+    position:relative ;
+    bottom: 600px;
+    left: 250px;
+    background-color: #FFFFFF;
+    width: 800px;
+   
+}
+.btn1{
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    background-color:#D0D5DD ;
+}
+.btn2{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    height: 25px;
+    border: none;
+}
+.btn3{
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    background-color:#D0D5DD ;
+}
+.btn-0{
+    border: none;
+    background-color: #FFFFFF;
+}
+@media screen and (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+    .container1 .content2 {
+        width: 100%;
+    }
+    .container1 .input {
+        width: 90%;
+    }
+    .btn-search {
+        left: 85%;
+        top: -35px;
+    }
+.container1 .content1{
+    margin-right:520px;
+}
+.container1 .content2 .btn-search{
+display: none;
+}
+    .container2 {
+        margin-left: 0;
+        padding: 10px;
+        display: none;
+    }
+   .item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container3 {
+        margin-left: 0;
+        text-align: center;
+        background-color: #0D6EFD;
+        color: #FFFFFF;
+    }
+.container3 .icon{
+    display: none;
+}
+    .container4 {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .container4 .content2 {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+
+    .container4 .content2 div {
+        width: 100%;
+    }
+
+    .container5 {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-left: 0;
+    }
+   .container5 .content{
+    display: none;
+   }
+    .container6 {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .container7 {
+        left: 0;
+        width: 100%;
+        position: static;
+        text-align: center;
+        display: none;
+    }
+    
+}

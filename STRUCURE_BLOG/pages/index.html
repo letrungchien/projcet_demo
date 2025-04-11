@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container-div" class="container-div">
+        <div class="container1">
+            <div class="content1">
+                <span><img src="../assets/icons/Vector (6).png" alt=""><span
+                        style="font-size:18px;">RIKKEI_EDU_BLOG</span></span>
+            </div>
+            <div class="content2">
+                <span><input id="input" class="input" type="text" placeholder="Tìm kiếm các bài viết"></span>
+                <button onclick="searchTitle()"  class="btn-search"><img  src="../assets/icons/search.png" alt=""></button>
+            </div>
+            <div class="content3">
+                <span><button>Sign Up</button>&nbsp;&nbsp; <button> Sign in</button></span>
+            </div>
+            <div class="avatar" onclick="showContainer7()" style="margin-left: 170px;" id="img1">
+            </div>
+        </div>
+
+        <div class="container2">
+            <div>
+                <h3>Bài viết blog gần đây</h3>
+            </div>
+            <div class="item">
+                <div class="item1">
+                    <div class="img1"><img src="../assets/images/a1.jpg" alt="" width="550px" height="250px"></div><br>
+                    <div class="text">
+                        <p class="date">Date:2025-02-25</p>
+                        <h4>Một Ngày Làm Việc Hiệu Quả</h4>
+                        <span class="text1">Hôm nay là một ngày làm việc rất hiệu quả. Tôi đã hoàn thành một báo cáo trước thời hạn và nhận được phản hồi tích cực từ quản lý của mình.</span><br><br>
+                        <button id="btn-topic" class="btn-topic">Nhật ký hàng ngày</button>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex;gap: 20px;">
+                        <div><img src="../assets/images/a2.jpg" alt="" width="300px" height="200px"> </div>
+                        <div style="width: 320px;">
+                            <p class="date">Date:2025-02-25</p>
+                            <h4>Một Ngày Làm Việc Hiệu Quả</h4>
+                            <span class="text1">Hôm nay là một ngày làm việc rất hiệu quả. Tôi đã hoàn thành một báo cáo trước thời hạn và nhận được phản hồi tích cực từ quản lý của mình..</span><br><br>
+                            <button id="btn-topic" class="btn-topic">Nhật ký hàng ngày</button>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 20px;">
+                        <div><img src="../assets/images/a3.jpg" alt="" width="300px" height="200px"></div>
+                        <div style="width: 320px;">
+                            <p class="date">Date:2025-02-25</p>
+                            <h4>Một Ngày Làm Việc Hiệu Quả</h4>
+                            <span class="text1">Hôm nay là một ngày làm việc rất hiệu quả. Tôi đã hoàn thành một báo cáo trước thời hạn và nhận được phản hồi tích cực từ quản lý của mình..</span><br><br>
+                            <button id="btn-topic" class="btn-topic">Nhật ký hàng ngày</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container3" id="container3">
+            <h1 onclick="showAdd()">Thêm bài viết <span class="icon"> <img src="../assets/icons/plus-circle.png"
+                        alt="" width="30px"></span></h1>
+        </div>
+        <div class="container4" id="container4">
+            <div class="content1"><button style="background-color: aqua;border: none;border-radius: 5px;color: #FFFFFF;" onclick="renderItem();">Tất cả</button> <span  id="span"></span></div><br>
+            <div class="content2" id="content2">
+                <!-- <div>
+                    <div><img src="../assets/images/a2.jpg" alt="" width="350px" height="200px"> </div>
+                    <div style="width: 350px;">
+                        <p class="date">Date:2025-02-25</p>
+                        <h4>A Productive Day at Work &nbsp;&nbsp;<button id="btn-many" class="btn-many" onclick="showDetails()"><img
+                                    src="../assets/icons/Icon wrap.png" alt="" height="40px"></button></h4>
+                        <span class="text1">Today was a really productive day at work. I managed to finish a report
+                            ahead of schedule and received positive feedback from my manager.</span><br><br>
+                        <button id="btn-topic" class="btn-topic">Daily Journal</button>
+                    </div>
+                </div> -->
+            </div>
+        </div><br><br>
+        <p style="margin-right: 200px;text-align: center;justify-content: space-around;display: flex;" id="btn"></p>
+        <div class="add" id="add">
+            <h3>📝 Add New Article <button onclick="closeAdd()" style="margin-left: 600px;border: none;background-color: #FFFFFF;" >x</button></h3>
+            <label for="title"><b>Title:</b></label><br>
+            <input style="width: 900px;" type="text" id="title"><br>
+            <label for="articleCategories"><b>Article Categories:</b></label><br>
+            <select style="width: 900px;height: 35px;" name="" id="category">
+            </select ><br>
+            <label for="mood"><b>Mood:</b></label><br>
+            <select style="width: 900px;height: 30px;" name="mood" id="mood">
+                <option value=" Vui" >😄 Vui</option>
+                <option value="Buồn">😢 Buồn</option>
+            </select ><br>
+            <label for="content"><b>Content:</b></label><br>
+            <textarea style="width: 900px;height: 60px;" name="" id="content"></textarea><br> <br>
+            <label for="status"><b>Status:</b></label>
+            &nbsp;&nbsp;
+            <input type="radio" id="public" name="status" value="public">
+            <label for="public">Public</label>
+            &nbsp;&nbsp;
+            <input type="radio" id="private" name="status" value="private">
+            <label for="private">Private</label><br><br>
+            <div onclick="addImg()" style="width: 300px;text-align: center;  border: 2px dashed #ccc;">
+               <p><img src="../assets/icons/Group (3).png" alt=""></p>
+               <p>Browse and chose the files you want to upload from your computer</p>
+            </div><br>
+            <button style="background-color: #28A745;color: #FFFFFF;border: none;border-radius: 5px;"
+                onclick="add()">Add</button>
+        </div>
+        <div class="details" id="details">
+            <div><button onclick="hideDetails()" style="border: 1px solid black;"><img
+                        src="../assets/icons/Icon (1).png" alt=""></button></div><br>
+            <div style="display: flex;">
+                <div class=""><img src="../assets/images/Avatar.png" alt=""></div>
+                <div class="content">
+                    <h4 style="text-align: center;">A Productive Day at Work</h4>
+                    <p>Today was a really productive day at work. I managed to finish a report ahead of schedule and
+                        received positive feedback from my manager.</p>
+                    <p>15 Like <button style="border: none;"><img src="../assets/icons/Icon (2).png" alt=""></button> 6
+                        Replies <button style="border: none;"><img src="../assets/icons/Icon (3).png" alt=""></button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container5">
+            <div>
+                <h2>MY BLOG</h2>
+            </div>
+            <div class="content">
+                <b>About </b><br><br>
+                <b>Rareblocks</b><br>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing <br>
+                    elit. Nullam dictum aliquet accumsan porta lectus <br>
+                    ridiculus in mattis. Netus sodales in volutpat <br>
+                    ullamcorper amet adipiscing fermentum.
+                </span>
+            </div>
+            <div class="content">
+                <b>Company</b><br><br>
+                <p>About</p>
+                <p>Features</p>
+                <p>Works</p>
+                <p>Career</p>
+            </div>
+            <div class="content">
+                <b>Help</b><br><br>
+                <p>Customer Support</p>
+                <p>Delivery Details</p>
+                <p>Terms & Conditions</p>
+                <p>Privacy Policy</p>
+            </div>
+            <div class="content">
+                <b>Resources</b><br><br>
+                <p>Free eBooks</p>
+                <p>Development Tutorial</p>
+                <p>How to - Blog</p>
+                <p>Youtube Playlist</p>
+            </div>
+        </div>
+        <div class="container6"> <span> <img src="../assets/icons/1.png" alt=""> &nbsp;&nbsp;<img
+                    src="../assets/icons/logo-fb-simple 2.png" alt=""> &nbsp;&nbsp;<img src="../assets/icons/3.png"
+                    alt="">&nbsp;&nbsp; <img src="../assets/icons/Vector (8).png" alt=""></span></div>
+        <div id="container7" class="container7">
+            <div style="display: flex;gap: 10px;">
+                <div id="img2"> </div>
+                <div id="information">
+                    <!-- <b>Rikkei</b>
+                    <p>rikkei@gmail.com</p> -->
+                </div>
+            </div>
+            <div>
+                <button class="btn-0">Xem hồ sơ</button>
+                <button onclick="updateImg()" class="btn-0">Cập nhật ảnh đại diện</button>
+                <button onclick="updatePassword()" class="btn-0">Đổi mật khẩu</button>
+                <hr>
+                <button class="btn-0">Đăng xuất</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>

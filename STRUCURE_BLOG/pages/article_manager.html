@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/article_manager.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div>
+        <div class="container1">
+            <p style="margin-left: 1370px;"> <span><img src="../assets/icons/Mail.png" alt=""></span>&nbsp;&nbsp; <span><img src="../assets/icons/bell.png" alt=""></span> &nbsp;&nbsp;<span><img src="../assets/images/Avatar.png" alt=""></span></p>
+        </div>
+        <div class="container2">
+            <div class="content1">
+                <button id="btn-user"  onclick="showUsers()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector1.png" alt="">&nbsp; Manage Users</button><br>
+                <button " id="btn-entries" onclick="showEntries()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector2.png" alt="">&nbsp; Manage Entries</button><br>
+                <button style="background-color:brown; color: #FFFFFF;" id="btn-artice" onclick="showArticle()" class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector3.png" alt="">&nbsp; Manage Article</button><br>
+                <button class="btn"><img style="background-color: #F45A07;" src="../assets/icons/Vector4.png" alt="" >&nbsp; Log out </button>
+            </div>
+            <div id="content3" class="content3">
+                <div class="item1">
+                    <input id="searchArticle" style="width: 300px;height: 40px;" type="text" placeholder="Tìm kiếm bài viết ">
+                    <span onclick="searchArticle()" style="position: relative;right: 25px;" ><i class="fa-solid fa-magnifying-glass" ></i></span>
+                </div>
+                <div class="item2">
+                  <button style="background-color:#65558F;color: #FFFFFF;border-radius: 100px;height: 35px;" onclick="showAdd()">Thêm bài viết</button>  <b style="margin-left: 400px;font-size: 24px;">Quản lý bài viết</b><br><br><br>
+                    <div style="margin-left: 20px;">
+                        <table style="width: 980px;">
+                            <thead>
+                                <tr>
+                                    <td class="td-2"><b>Ảnh</b></td>
+                                    <td class="td-2"><b>Tiêu đề</b>  </td>
+                                    <td class="td-2"><b>Chủ đề</b></td>
+                                    <td class="td-2"><b>Nội dung</b></td>
+                                    <td class="td-2"><b>Trạng thái</b></td>
+                                    <td class="td-2"><b>Chỉnh sửa trạng thái</b></td>
+                                    <td class="td-2"><b>Hành động</b></td>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                                <!-- <tr>
+                                    <td ><img src="../assets/images/a1.jpg" alt="" width="100px" height="70px"></td>
+                                    <td >Học nấu cá sốt cà chua</td>
+                                    <td>Nấu ăn</td>
+                                    <td onclick="showDetails(${i})">tôi đã học được cách nấu ăn...</td>
+                                    <td><button>Public</button></td>
+                                    <td ><select name="" id="" onclik="updateStatus(this)">
+                                        <option value="">Public</option>
+                                       <option value="">Private</option>
+                                    </select>
+                                </td>
+                                    <td ><button onclick="showUpdate()">sửa</button><button onclick="deteArticle()">Xóa</button> </td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <p style="margin-right: 200px;text-align: center;justify-content: space-around;display: flex;" id="btn"></p>
+                <div class="details" id="details">
+                    <div><button onclick="hideDetails()" style="border: 1px solid black;"><img
+                                src="../assets/icons/Icon (1).png" alt=""></button></div><br>
+                    <div style="display: flex;">
+                        <div class=""><img src="../assets/images/Avatar.png" alt=""></div>
+                        <div class="content">
+                            <h4 style="text-align: center;">A Productive Day at Work</h4>
+                            <p>Today was a really productive day at work. I managed to finish a report ahead of schedule and
+                                received positive feedback from my manager.</p>
+                            <p>15 Like <button style="border: none;"><img src="../assets/icons/Icon (2).png" alt=""></button> 6
+                                Replies <button style="border: none;"><img src="../assets/icons/Icon (3).png" alt=""></button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="add" id="add">
+                    <h3>📝 Add New Article <button onclick="closeAdd()" style="margin-left: 600px;border: none;background-color: #FFFFFF;" >x</button></h3>
+                    <label for="title"><b>Title:</b></label><br>
+                    <input style="width: 900px;" type="text" id="title"><br>
+                    <label for="articleCategories"><b>Article Categories:</b></label><br>
+                    <select style="width: 900px;height: 35px;" name="" id="category">
+                    </select ><br>
+                    <label for="mood"><b>Mood:</b></label><br>
+                    <select style="width: 900px;height: 30px;" name="mood" id="mood">
+                        <option value=" Vui" >😄 Vui</option>
+                        <option value="Buồn">😢 Buồn</option>
+                    </select ><br>
+                    <label for="content"><b>Content:</b></label><br>
+                    <textarea style="width: 900px;height: 60px;" name="" id="content"></textarea><br> <br>
+                    <label for="status"><b>Status:</b></label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="public" name="status" value="public">
+                    <label for="public">Public</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="private" name="status" value="private">
+                    <label for="private">Private</label><br><br>
+                    <div onclick="addImg()" style="width: 300px;text-align: center;  border: 2px dashed #ccc;">
+                       <p><img src="../assets/icons/Group (3).png" alt=""></p>
+                       <p>Browse and chose the files you want to upload from your computer</p>
+                    </div><br>
+                    <button style="background-color: #28A745;color: #FFFFFF;border: none;border-radius: 5px;"
+                        onclick="add()">Add</button>
+                </div>
+                <div class="update" id="update">
+                    <h3>📝 Update Article <button onclick="closeUpdate()" style="margin-left: 600px;border: none;background-color: #FFFFFF;" >x</button></h3>
+                    <label for="title"><b>Title:</b></label><br>
+                    <input style="width: 900px;" type="text" id="titleUpdate"><br>
+                    <label for="articleCategories"><b>Article Categories:</b></label><br>
+                    <select style="width: 900px;height: 35px;" name="" id="categoryUpdate">
+                    </select ><br>
+                    <label for="mood"><b>Mood:</b></label><br>
+                    <select style="width: 900px;height: 30px;" name="mood" id="moodUpdate">
+                        <option value=" Vui" >😄 Vui</option>
+                        <option value="Buồn">😢 Buồn</option>
+                    </select ><br>
+                    <label for="content"><b>Content:</b></label><br>
+                    <textarea style="width: 900px;height: 60px;" name="" id="contentUpdate"></textarea><br> <br>
+                    <label for="status"><b>Status:</b></label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="public" name="status" value="public">
+                    <label for="public">Public</label>
+                    &nbsp;&nbsp;
+                    <input type="radio" id="private" name="status" value="private">
+                    <label for="private">Private</label><br><br>
+                    <div onclick="addImg()" style="width: 300px;text-align: center;  border: 2px dashed #ccc;">
+                       <p><img src="../assets/icons/Group (3).png" alt=""></p>
+                       <p>Browse and chose the files you want to upload from your computer</p>
+                    </div><br>
+                    <button style="background-color: #28A745;color: #FFFFFF;border: none;border-radius: 5px;"
+                        onclick="update()">Cập nhật</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/article_manager.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
