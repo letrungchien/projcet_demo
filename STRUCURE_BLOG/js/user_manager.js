@@ -31,7 +31,7 @@ function sorta_b() {
         
     }
     document.getElementById("tbody").innerHTML=str;
-    document.getElementById("btn-users").innerHTML=`${users.length} users`;
+    document.getElementById("btn-users").innerHTML=`${users.length} người`;
     renderItem();
     renderPage();
 }
@@ -59,7 +59,7 @@ function sortb_a() {
         `
     }
     document.getElementById("tbody").innerHTML=str;
-    document.getElementById("btn-users").innerHTML=`${users.length} users`;
+    document.getElementById("btn-users").innerHTML=`${users.length} người`;
     renderItem();
     renderPage();
 }
@@ -128,7 +128,7 @@ function renderItem() {
      `;
     }
     document.getElementById("tbody").innerHTML = str;
-    document.getElementById("btn-users").innerHTML=`${users.length} users`;
+    document.getElementById("btn-users").innerHTML=`${users.length} người`;
     renderPage();
 }
 function renderPage() {
